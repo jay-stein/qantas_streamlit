@@ -14,7 +14,7 @@ import altair as alt
 color_list = ['#E9D985','#B2BD7E','#749C75','#6A5D7B','#C62E65']
 
 #%%
-planes = pd.read_csv(r"data\qantas_cluster_analysis.csv")
+planes = pd.read_csv(r"https://raw.githubusercontent.com/jay-stein/qantas_streamlit/main/data/qantas_cluster_analysis.csv")
 
 #%%
 col_to_view = ['TAIL_ID', 'AVERAGE DELAY', 'AVERAGE TURNAROUND', 'DISTANCE', 'FLIGHTS',
@@ -97,7 +97,7 @@ if add_sidebar == 'Individual scatter plot':
     st.title("Qantas Individual Scatter Plot 📈")
     st.write('test 123')
 
-    pca_df = pd.read_csv(r"data\qantas_pca_results.csv", index_col=0)
+    pca_df = pd.read_csv(r"https://raw.githubusercontent.com/jay-stein/qantas_streamlit/main/data/qantas_pca_results.csv", index_col=0)
 
     #combine with planes_filtered
     pca_df = pca_df.merge(planes_filtered)
